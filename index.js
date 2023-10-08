@@ -1,10 +1,10 @@
 const express = require("express") // ini perlu
 const cors = require('cors');
 const path = require('path'); //tidak perlu npm install
-const connection = require('../app/model/index')
+const connection = require('./app/model/index')
 // init express server and router
 const app = express();
-const mainRouter = require('../app/routes');
+const mainRouter = require('./app/routes');
 require('dotenv').config()
 
 app.use(cors());

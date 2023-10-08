@@ -7,10 +7,4 @@ const sequelize = new Sequelize(process.env.MYSQLDATABASE, process.env.MYSQLUSER
     dialect: 'mysql'
 });
 
-// const sequelize = new Sequelize('revou_jayapura', 'root', '', {
-//     host: 'localhost',
-//     dialect: 'mysql',
-//     logging: false
-// })
-
 module.exports = sequelize;
