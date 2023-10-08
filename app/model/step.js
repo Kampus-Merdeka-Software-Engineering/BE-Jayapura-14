@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 
-const Nama = sequelize.define('nama', {
+const Step = sequelize.define('Step', {
     title: {
         type: DataTypes.STRING,
         allowNull: false
@@ -11,4 +11,4 @@ const Nama = sequelize.define('nama', {
     }
 });
 
-module.exports = Nama
+module.exports = Step

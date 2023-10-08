@@ -1,16 +1,16 @@
-const Nama = require('../model/nama');
-const Form = require('./form');
+const Step = require('../model/step');
+const Form = require('../model/form');
 
-async function header(req, res){
+async function step(req, res){
     try {
-        const nama = await Nama.findOne();
-        res.json(nama);
+        const step = await Step.findOne();
+        res.json(step);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 }
 
-// Post Form Form Data
+// Post Form Data
 async function form(req, res){
     try {
         const form = await Form.create(req.body);
@@ -21,6 +21,6 @@ async function form(req, res){
 }
 
 module.exports = {
-    nama,
+    step,
     form
 }
