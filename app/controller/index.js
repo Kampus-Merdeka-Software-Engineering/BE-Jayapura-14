@@ -3,7 +3,7 @@ const Form = require('../model/form');
 
 async function step(req, res){
     try {
-        const step = await Step.findOne();
+        const step = await Step.findAll();
         res.json(step);
     } catch (err) {
         res.status(500).json({ error: err.message });
