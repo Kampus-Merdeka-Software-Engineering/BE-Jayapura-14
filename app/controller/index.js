@@ -20,7 +20,18 @@ async function form(req, res){
     }
 }
 
+// Post Score Data
+async function score(req, res){
+    try {
+        const score = await Score.create(req.body);
+        res.json({ success: true, score });
+    } catch (err) {
+        res.status(500).json({ success: false, error: err.message });
+    }
+}
+
 module.exports = {
     step,
-    form
+    form,
+    score
 }

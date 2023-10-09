@@ -4,5 +4,6 @@ const controller = require("./controller/index")
 
 router.get('/step', controller.step);
 router.post('/form', controller.form);
+router.post('/form', controller.score);
 
 module.exports = router;
